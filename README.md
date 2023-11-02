@@ -1,5 +1,5 @@
-# machine-coding
+# frontend-machine-coding-problems
 
-here are some common machine coding problems
+here are some common frontend machine coding problems
 
-and I will try to add as much as machine coding problems I can.
+and I will try to add as much as problems I can.
