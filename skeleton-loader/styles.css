@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.skeleton {
+  background-color: #e0e0e0;
+}
+
+@keyframes animate {
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.skeleton::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  width: 50%;
+  height: 100%;
+  transform: translateX(-200%);
+  animation: animate 1s infinite;
+}
