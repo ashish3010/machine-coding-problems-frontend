@@ -1,3 +1,6 @@
+// Sandbox link
+// https://codesandbox.io/s/carousal-xm3lhl
+
 import { useEffect, useRef, useState } from "react";
 import "./styles.css";
 
