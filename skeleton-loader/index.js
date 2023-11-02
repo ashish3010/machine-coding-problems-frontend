@@ -1,3 +1,4 @@
+// Sandbox link
 //  https://codesandbox.io/s/skeleton-loader-g9j7l8?file=/src/App.js
 
 import Skeleton from "./skeleton";
