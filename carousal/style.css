@@ -1,0 +1,53 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.carousal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  height: 50px;
+}
+
+.carousal {
+  display: flex;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+}
+
+.item {
+  display: none;
+}
+
+.item img {
+  width: 500px;
+  height: 500px;
+}
+
+.active {
+  display: block !important;
+}
+
+.pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: #333333;
+}
+.activeSlide {
+  background-color: blue;
+}
+
+.star {
+  margin-top: 22px;
+  color: white;
+}
