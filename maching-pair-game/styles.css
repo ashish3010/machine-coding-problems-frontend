@@ -1,0 +1,47 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.image-grid {
+  margin: auto;
+  width: calc(100vw - 40%);
+  height: calc(100vh - 40%);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 16px;
+}
+
+.image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.image img {
+  object-fit: contain;
+  width: 150px;
+  height: 150px;
+}
+
+.closed::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  background-color: red;
+}
+
+.active::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
