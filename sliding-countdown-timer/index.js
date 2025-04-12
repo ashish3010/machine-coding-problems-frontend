@@ -60,4 +60,16 @@ const DigitWrapper = ({ current }) => {
   );
 };
 
-export default CountdownTimer;
+const App = () => {
+  return (
+    <div className="wrapper">
+      <div className="timer-wrapper1">
+        <div className="timer-wrapper2">
+          <CountdownTimer initialTime={300} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
