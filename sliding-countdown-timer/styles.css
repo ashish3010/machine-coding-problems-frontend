@@ -1,7 +1,7 @@
 .countdown-timer {
   display: flex;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Arial", sans-serif;
 }
 
@@ -68,10 +68,42 @@
 
 .digit-wrapper:nth-child(1),
 .digit-wrapper:nth-child(2) {
-  color: black;
+  color: #0f172a;
 }
 
 .digit-wrapper:nth-child(4),
 .digit-wrapper:nth-child(5) {
-  color: blue;
+  color: #3b82f6;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #f8fafc;
+}
+
+.timer-wrapper1 {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #000;
+  border-radius: 100%;
+  background-color: #0f172a;
+}
+
+.timer-wrapper2 {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #000;
+  border-radius: 100%;
+  background-color: #fff;
 }
