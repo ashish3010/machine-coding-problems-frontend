@@ -1,47 +1,173 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  gap: 48px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-grid {
-  margin: auto;
-  width: calc(100vw - 40%);
-  height: calc(100vh - 40%);
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
-.image {
+.card {
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
   position: relative;
-  width: 150px;
-  height: 150px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
-.image img {
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  width: 150px;
-  height: 150px;
 }
 
-.closed::after {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 150px;
-  height: 150px;
-  top: 0;
-  left: 0;
-  background-color: red;
+.card-back {
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/21/13/29/yellow-1845394_640.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.active::after {
-  display: block;
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view-count {
+  font-size: 24px;
+  font-weight: 500;
+  color: #331202;
+}
+
+.view-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.atempts-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.atempts-count {
+  font-size: 36px;
+  font-weight: 500;
+  color: #331202;
+}
+
+.confetti-container {
   position: absolute;
-  content: "";
-  width: 150px;
-  height: 150px;
   top: 0;
   left: 0;
-  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confetti-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.gameOverWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gameOverTxt {
+  font-size: 64px;
+  font-size: 500;
+  color: #331202;
+}
+
+.restart-button {
+  margin-top: 24px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #7a3e21, #331202);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.restart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.restart-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
